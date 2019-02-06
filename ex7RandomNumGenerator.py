@@ -11,7 +11,8 @@
 
 import random
 
-print('A random number will be chosen between 1 and 10. Lets see how long it takes to guess the number!')
+print('A random number will be chosen between 1 and 10. Lets see how long it\n
+      takes to guess the number!')
 
 int_count = 0
 rand_num = random.randint(1, 10)

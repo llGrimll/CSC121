@@ -28,26 +28,36 @@ while (test_score != ''):
 average = total_score / count
 if average > 90:
     if count == 1:
-        print(f'Your total grade was a {round(average, 2)} which is an "A" out of 1 test.')
+        print(f'Your total grade was a {round(average, 2)} which is an "A"\n
+              out of 1 test.')
     else:
-        print(f'Your total grade was a {round(average, 2)} which is an "A" out of {count} tests.')
+        print(f'Your total grade was a {round(average, 2)} which is an "A"\n
+              out of {count} tests.')
 elif average > 80:
     if count == 1:
-        print(f'Your total grade was a {round(average, 2)} which is an "B" out of 1 test.')
+        print(f'Your total grade was a {round(average, 2)} which is an "B"\n
+              out of 1 test.')
     else:
-        print(f'Your total grade was a {round(average, 2)} which is an "B" out of {count} tests.')
+        print(f'Your total grade was a {round(average, 2)} which is an "B"\n
+              out of {count} tests.')
 elif average > 70:
     if count == 1:
-        print(f'Your total grade was a {round(average, 2)} which is an "C" out of 1 test.')
+        print(f'Your total grade was a {round(average, 2)} which is an "C"\n
+              out of 1 test.')
     else:
-        print(f'Your total grade was a {round(average, 2)} which is an "C" out of {count} tests.')
+        print(f'Your total grade was a {round(average, 2)} which is an "C"\n
+              out of {count} tests.')
 elif average > 60:
     if count == 1:
-        print(f'Your total grade was a {round(average, 2)} which is an "D" out of 1 test.')
+        print(f'Your total grade was a {round(average, 2)} which is an "D"\n
+              out of 1 test.')
     else:
-        print(f'Your total grade was a {round(average, 2)} which is an "D" out of {count} tests.')
+        print(f'Your total grade was a {round(average, 2)} which is an "D"\n
+              out of {count} tests.')
 else:
     if count == 1:
-        print(f'Your total grade was a {round(average, 2)} which is an "F" out of 1 test. Study harder next time!')
+        print(f'Your total grade was a {round(average, 2)} which is an "F"\n
+              out of 1 test. Study harder next time!')
     else:
-        print(f'Your total grade was a {round(average, 2)} which is an "F" out of {count} tests. Study harder next time!')
+        print(f'Your total grade was a {round(average, 2)} which is an "F"\n
+              out of {count} tests. Study harder next time!')
