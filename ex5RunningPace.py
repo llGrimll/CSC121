@@ -18,4 +18,5 @@ min_per_mile = total_time / miles
 seconds = str(min_per_mile - int(min_per_mile))[1:]
 final_seconds = float(seconds) * 60
 
-print(f'You ran a pace of {int(min_per_mile)}:{round(final_seconds)} for {miles} miles.')
+print(f'''You ran a pace of {int(min_per_mile)}:{round(final_seconds)} for\n
+      {miles} miles.''')
