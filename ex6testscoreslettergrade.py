@@ -17,7 +17,7 @@ print('Enter your test scores below. Once done, hit enter.')
 count = 0
 total_score = 0
 test_score = '0'
-while (test_score != ''):
+while test_score != '':
     test_score = input('What was your test score: ')
     if test_score == '':
         break
