@@ -11,8 +11,8 @@
 
 import random
 
-print('A random number will be chosen between 1 and 10. Lets see how long it\n
-      takes to guess the number!')
+print('''A random number will be chosen between 1 and 10. Lets see how long it
+      takes to guess the number!''')
 
 int_count = 0
 rand_num = random.randint(1, 10)
@@ -24,7 +24,7 @@ while rand_num > 0:
         print(f'That is incorrect. This was turn number {int_count}.')
     else:
         int_count += 1
-        print(f'You got the number, {number}.')
+        print(f'You got the number in {int_count} amount of tries.')
         break
 
 if int_count == 1:
