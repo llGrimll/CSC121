@@ -15,8 +15,8 @@ total_time = minutes + (sec / 60)
 min_per_mile = total_time / miles
 
 # conversion of decimal to seconds
-seconds = str(min_per_mile - int(min_per_mile))[1:]
-final_seconds = float(seconds) * 60
+seconds = min_per_mile - int(min_per_mile)
+final_seconds = seconds * 60
 
 print(f'''You ran a pace of {int(min_per_mile)}:{round(final_seconds)} for\n
       {miles} miles.''')
