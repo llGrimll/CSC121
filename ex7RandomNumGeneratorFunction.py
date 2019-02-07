@@ -7,7 +7,7 @@
 # statement based on how many guesses it took to guess the numberself.
 # You will need to import the random module and use the randint() function.
 #
-# Without using a while loop
+# WITHOUT USING A WHILE LOOP
 #
 ##############################################################################
 
