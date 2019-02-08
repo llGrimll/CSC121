@@ -18,6 +18,7 @@ print('''A random number will be chosen between 1 and 10. Lets see how long it
 rand_num = random.randint(1, 10)
 int_count = 0
 
+
 def guess_attempt():
     number = int(input('Pick a number between 1 and 10: '))
     if number != rand_num:
@@ -33,5 +34,6 @@ def guess_attempt():
                       That was a good guess!''')
         else:
             print(f'You picked the number in {int_count} attempts!')
+
 
 guess_attempt()
