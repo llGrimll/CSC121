@@ -19,9 +19,10 @@ count = 0
 user_win = 0
 comp_win = 0
 
-while count != 3:
+while count < 3:
     user_guess = input('Pick Rock, Paper or Scissors: ')
     user_guess = user_guess.lower()
+
     # 1 == rock
     if user_guess == 'rock':
         user_selection = 1
@@ -34,44 +35,44 @@ while count != 3:
 
     comp_guess = random.randint(1, 3)
 
+    # 1 == rock
+    if comp_guess == 1:
+        comp_selection = 'rock'
+    # 2 == paper
+    elif comp_guess == 2:
+        comp_selection = 'paper'
+    # 3 == scissors
+    else:
+        comp_selection = 'scissors'
+
     # user chose rock
-    if user_selection == 1:
-        if comp_guess == 1:  # comp chooses rock
-            print('You tied!')
-        elif comp_guess == 2:  # comp chooses paper
-            comp_win += 1
-            count += 1
-            print('You lose, computer chose paper.')
-        else:  # comp chooses scissors
-            user_win += 1
-            count += 1
-            print('You win, computer chose scissors.')
-
-    # user chose paper
-    if user_selection == 2:
-        if comp_guess == 1:  # comp chooses rock
-            user_win += 1
-            count += 1
-            print('You win, computer chose scissors.')
-        elif comp_guess == 2:  # comp chooses paper
-            print('You tied!')
-        else:  # comp chooses scissors
-            comp_win += 1
-            count += 1
-            print('You lose, computer chose paper.')
-
-    # user chose scissors
-    if user_selection == 3:
-        if comp_guess == 1:  # comp chooses rock
-            comp_win += 1
-            count += 1
-            print('You lose, computer chose paper.')
-        elif comp_guess == 2:  # comp chooses paper
-            user_win += 1
-            count += 1
-            print('You win, computer chose scissors.')
-        else:  # comp chooses scissors
-            print('You tied!')
+    if user_selection == comp_guess:
+        print(f'The computer also chose {user_guess}. You tied!')
+    # user - rock ; comp - paper ; lose
+    elif user_selection == 1 and comp_guess == 2:
+        comp_win += 1
+        count += 1
+        print(f'The computer chose {comp_selection}.\nYou lose. Paper covers rock.')
+    # user - paper ; comp - scissors ; lose
+    elif user_selection == 2 and comp_guess == 3:
+        comp_win += 1
+        count += 1
+        print(f'The computer chose {comp_selection}.\nYou lose! Scissors cuts paper.')
+    # user - scissors ; comp - rock ; lose
+    elif user_selection == 3 and comp_guess == 1:
+        comp_win += 1
+        count += 1
+        print(f'The computer chose {comp_selection}.\nYou lose! Rock crushes scissors.')
+    # all else is a win
+    else:
+        user_win += 1
+        count += 1
+        if user_selection == 1:
+            print('You win, Rock crushes scissors!')
+        elif user_selection == 2:
+            print('You win! Paper covers rock!')
+        else:
+            print('You win! Scissors cuts paper!')
 
     print(f'The score is: User - {user_win}, Comp - {comp_win}.')
 
@@ -83,6 +84,6 @@ while count != 3:
         continue
 
 if user_win == 2:
-    print(f"You beat the computer! You won 2 out of 3 games!")
-else:
-    print(f"The computer beat you! You lost 2 out of 3 games!")
+    print(f"You beat the computer! You won 2 out of a best of 3 games!")
+elif comp_win == 2:
+    print(f"The computer beat you! You lost 2 out of a best of 3 games!")
