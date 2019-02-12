@@ -24,14 +24,17 @@ while count < 3:
     user_guess = user_guess.lower()
 
     # 1 == rock
-    if user_guess == 'rock':
+    if user_guess == 'r':
         user_selection = 1
     # 2 == paper
-    elif user_guess == 'paper':
+    elif user_guess == 'p':
         user_selection = 2
     # 3 == scissors
-    else:
+    elif user_guess == 's':
         user_selection = 3
+    else:
+        user_selection = 4
+        print('Please choose a correct input: [R]ock, [P]aper or [S]cissors.')
 
     comp_guess = random.randint(1, 3)
 
