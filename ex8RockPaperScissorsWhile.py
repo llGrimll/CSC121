@@ -19,7 +19,7 @@ count = 0
 user_win = 0
 comp_win = 0
 
-while count < 3:
+while count < 5:
     user_guess = input('Pick Rock, Paper or Scissors: ')
     user_guess = user_guess.lower()
 
@@ -50,7 +50,7 @@ while count < 3:
 
     # user chose rock
     if user_selection == comp_guess:
-        print(f'The computer also chose {user_guess}. You tied!')
+        print(f'The computer also chose {comp_selection}. You tied! Try again!')
     # user - rock ; comp - paper ; lose
     elif user_selection == 1 and comp_guess == 2:
         comp_win += 1
@@ -68,6 +68,8 @@ while count < 3:
         print(f'The computer chose {comp_selection}.\nYou lose! Rock crushes scissors.')
     # all else is a win
     else:
+        if user_selection == 4:
+            continue
         user_win += 1
         count += 1
         if user_selection == 1:
@@ -79,14 +81,14 @@ while count < 3:
 
     print(f'The score is: User - {user_win}, Comp - {comp_win}.')
 
-    if user_win == 2:
+    if user_win == 3:
         break
-    elif comp_win == 2:
+    elif comp_win == 3:
         break
     else:
         continue
 
-if user_win == 2:
-    print(f"You beat the computer! You won 2 out of a best of 3 games!")
-elif comp_win == 2:
-    print(f"The computer beat you! You lost 2 out of a best of 3 games!")
+if user_win == 3:
+    print(f"You beat the computer! You won 2 out of {count} games!")
+elif comp_win == 3:
+    print(f"The computer beat you! You lost 2 out of {count} games!")
