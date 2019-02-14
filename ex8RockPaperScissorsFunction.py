@@ -66,7 +66,8 @@ def rock_paper_scissors():
 
     # user chose rock
     if user_selection == comp_guess:
-        print(f'The computer also chose {comp_selection}. You tied! Try again!')
+        print(f"""The computer also chose {comp_selection}.
+        You tied! Try again!""")
         check_win()
     # user - rock ; comp - paper ; lose
     elif user_selection == 1 and comp_guess == 2:
