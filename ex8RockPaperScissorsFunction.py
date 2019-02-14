@@ -72,19 +72,22 @@ def rock_paper_scissors():
     elif user_selection == 1 and comp_guess == 2:
         comp_win += 1
         count += 1
-        print(f'The computer chose {comp_selection}.\nYou lose. Paper covers rock.')
+        print(f"""The computer chose {comp_selection}
+        You lose. Paper covers rock.""")
         check_win()
     # user - paper ; comp - scissors ; lose
     elif user_selection == 2 and comp_guess == 3:
         comp_win += 1
         count += 1
-        print(f'The computer chose {comp_selection}.\nYou lose! Scissors cuts paper.')
+        print(f"""The computer chose {comp_selection}.
+        You lose! Scissors cuts paper.""")
         check_win()
     # user - scissors ; comp - rock ; lose
     elif user_selection == 3 and comp_guess == 1:
         comp_win += 1
         count += 1
-        print(f'The computer chose {comp_selection}.\nYou lose! Rock crushes scissors.')
+        print(f"""The computer chose {comp_selection}.
+        You lose! Rock crushes scissors.""")
         check_win()
     # all else is a win
     else:
