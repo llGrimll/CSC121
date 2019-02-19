@@ -19,8 +19,10 @@ def drawPolygon(t, length, sides):
 
 def drawRowPolygons(t):
     y = 130
+    # number of rows function
     for i in range(3):
         x = -130
+        # number of polygon in each row function
         for i in range(3):
             t.penup()
             t.goto(x, y)
