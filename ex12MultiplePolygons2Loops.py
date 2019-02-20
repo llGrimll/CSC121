@@ -2,7 +2,6 @@ import turtle
 import random
 
 
-# one polygon function
 def drawPolygon(t, length, sides):
     # your code here.
     color_list = ['Red', 'Green', 'Blue', 'Brown', 'Aqua', 'Black',
@@ -19,15 +18,17 @@ def drawPolygon(t, length, sides):
 
 
 def drawRowPolygons(t):
-    x = -130
-    y = 0
-    # polygon rows funtion
+    y = 130
+    # number of rows function
     for i in range(3):
-        t.penup()
-        t.goto(x, y)
-        drawPolygon(geo, 30, 10)
-        x += 130
-    t.hideturtle()
+        x = -130
+        # number of polygon in each row function
+        for i in range(3):
+            t.penup()
+            t.goto(x, y)
+            drawPolygon(geo, 30, 10)
+            x += 130
+        y -= 130
 
 
 wn = turtle.Screen()
