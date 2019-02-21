@@ -21,7 +21,7 @@ def drawPolygon(t):
     t.penup()
 
 
-def drawRowPolygons(t):
+def randomPolygons(t):
     # polygon rows funtion
     for i in range(random.randint(10, 25)):
         x = random.uniform(-200, 200)
@@ -36,6 +36,6 @@ def drawRowPolygons(t):
 wn = turtle.Screen()
 geo = turtle.Turtle()
 
-drawRowPolygons(geo)  # draw a decagon
+randomPolygons(geo)  # draw a decagon
 
 wn.exitonclick()
