@@ -7,16 +7,16 @@
 import turtle
 import random
 
-objects = 12
-length = 50
+objects = 6
+sides = random.randint(3, 5)
 
 
 def draw_polygon(t):
     color_list = ['Red', 'Green', 'Blue', 'Brown', 'Aqua', 'Black',
                   'Aquamarine', 'Cyan', 'Crimson']
     clr = color_list[random.randint(0, 8)]
-    global length
-    sides = random.randint(3, 5)
+    global sides
+    length = 40
     t.speed(0)
     t.down()
     t.begin_fill()
@@ -30,16 +30,24 @@ def draw_polygon(t):
 
 
 def radial_symmetry(t):
-    global length
     global objects
+    global sides
     draw_polygon(tim)
     angle = 360 / objects
-    t.goto(0, 20)
+    # making sure the turtle goes to the center depending on the sides
+    # the number of sides creates a different sized polygon
+    if sides == 3:
+        y = 16
+    elif sides == 4:
+        y = 20
+    else:
+        y = 25
+    t.goto(0, y)
     for i in range(objects):
-        t.forward(200)
+        t.forward(150)
         t.right(90)
         draw_polygon(tim)
-        t.goto(0, 20)
+        t.goto(0, y)
         t.left(90 + angle)
     t.hideturtle()
 
