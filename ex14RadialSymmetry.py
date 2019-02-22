@@ -7,7 +7,7 @@
 import turtle
 import random
 
-objects = 6
+objects = 12
 sides = random.randint(3, 5)
 
 
