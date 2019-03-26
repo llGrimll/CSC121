@@ -4,7 +4,6 @@
 school = "Warren County Community College"
 # Your code below:
 school_list = school.split()
-x = 0
+
 for i in range(len(school_list)):
-    print(school_list[x])
-    x += 1
+    print(school_list[i])

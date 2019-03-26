@@ -36,6 +36,9 @@ def drawMultipleSquares(t):
         length = length * 1.25
 
 
+wn = turtle.Screen()
 geo = turtle.Turtle()
 
 drawMultipleSquares(geo)
+
+wn.exitonclick()

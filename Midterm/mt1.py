@@ -4,12 +4,10 @@
 nums = [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3]
 # Your code below:
 neg_nums = []
-x = 0
+
 for i in range(len(nums)):
-    num_value = nums[i]
-    if num_value < 0:
-        neg_nums.append(num_value)
-        x += 1
+    if nums[i] < 0:
+        neg_nums.append(nums[i])
         # print(neg_nums)
 
 neg_num_total = sum(neg_nums)
