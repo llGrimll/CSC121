@@ -21,13 +21,11 @@ def clear_fields():
 
 def add_attendee():
     attendees = []
-    # header = [["First", "Last"]]
     first = e1.get()
     last = e2.get()
     attendees.append(first)
     attendees.append(last)
-    # print(attendees
-    with open('attendees.csv', 'w', newline="") as writeFile:
+    with open('attendees.csv', 'a', newline="") as writeFile:
         writer = csv.writer(writeFile)
         writer.writerow(attendees)
     clear_fields()
