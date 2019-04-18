@@ -27,12 +27,13 @@ def calculate_tip():
     e3.delete(0, END)
     e4.delete(0, END)
     t = (int(e2.get()) / 100)
-    meal = int(e1.get())
+    meal = float(e1.get())
     tip_amount = meal * t
     tip = f'${tip_amount:.2f}'
     e3.insert(0, tip)
     meal_tip = meal + tip_amount
-    e4.insert(0, f'${meal_tip:.2f}')
+    total = f'${meal_tip:.2f}'
+    e4.insert(0, total)
 
 
 frame1 = Frame(m, bg="#E5E7E4")
@@ -58,9 +59,6 @@ e2 = Entry(m, font=("none, 8"))  # tip space
 e3 = Entry(m, font=("none, 8"))
 e4 = Entry(m, font=("none, 8"))
 
-t = 20  # default tip
-e2.insert(0, t)
-
 e1.grid(row=1, column=1, sticky=W)
 e2.grid(row=2, column=1, sticky=W)
 e3.grid(row=5, column=1, sticky=W)
@@ -73,5 +71,8 @@ btn3 = Button(m, text="Calculate", font=("bold"), command=calculate_tip)
 btn1.grid(row=0, column=0, sticky=W)
 btn2.grid(row=0, column=1, sticky=W)
 btn3.grid(row=4, column=1)
+
+t = 20  # default tip
+e2.insert(0, t)
 
 m.mainloop()
