@@ -2,6 +2,7 @@
 # ex30 CSC121
 
 import turtle
+import winsound
 
 wn = turtle.Screen()
 wn.title("Pong by Kominsky")
@@ -38,8 +39,8 @@ ball.shape("square")
 ball.color("white")
 ball.penup()
 ball.goto(0, 0)
-ball.dx = .08
-ball.dy = -.08
+ball.dx = .25
+ball.dy = .25
 
 # Pen
 pen = turtle.Turtle()
@@ -54,14 +55,14 @@ pen.write(f"Please A: 0  Player B: 0", align="center", font=("Courier", 24, "nor
 # Functions
 def paddle_a_up():
     y = paddle_a.ycor()
-    # y += 20
-    paddle_a.sety(y += 20)
+    y += 20
+    paddle_a.sety(y)
 
 
 def paddle_a_down():
     y = paddle_a.ycor()
-    # y -= 20
-    paddle_a.sety(y -= 20)
+    y -= 20
+    paddle_a.sety(y)
 
 
 def paddle_b_up():
@@ -96,19 +97,21 @@ while True:
     if ball.ycor() > 280:
         ball.sety(280)
         ball.dy *= -1
+        #  winsound.PlaySound("C:/Users/jkom8/Dropbox (Personal)/Personal/github/CSC121/ex30ponggamepython/bounce.wav", winsound.SND_ASYNC)
     if ball.ycor() < -280:
         ball.sety(-280)
         ball.dy *= -1
+        #  winsound.PlaySound("C:/Users/jkom8/Dropbox (Personal)/Personal/github/CSC121/ex30ponggamepython/bounce.wav", winsound.SND_ASYNC)
 
     # Left and Right Check
     if ball.xcor() > 390:
-        ball.goto(0,0)
+        ball.goto(0, 0)
         ball.dx *= -1
         score_a += 1
         pen.clear()
         pen.write("Please A: {}  Player B: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
     if ball.xcor() < -390:
-        ball.goto(0,0)
+        ball.goto(0, 0)
         ball.dx *= -1
         score_b += 1
         pen.clear()
@@ -118,6 +121,12 @@ while True:
     if (ball.xcor() > 330 and ball.xcor() < 350) and (ball.ycor() < (paddle_b.ycor() + 40)) and (ball.ycor() > (paddle_b.ycor() - 40)):
         ball.setx(330)
         ball.dx *= -1
+        ball.dx += .01
+        ball.dy += .01
+        #  winsound.PlaySound("C:/Users/jkom8/Dropbox (Personal)/Personal/github/CSC121/ex30ponggamepython/bounce.wav", winsound.SND_ASYNC)
     if (ball.xcor() < -330 and ball.xcor() > -350) and (ball.ycor() < (paddle_a.ycor() + 40)) and (ball.ycor() > (paddle_a.ycor() - 40)):
         ball.setx(-330)
         ball.dx *= -1
+        ball.dx += .01
+        ball.dy += .01
+        #  winsound.PlaySound("C:/Users/jkom8/Dropbox (Personal)/Personal/github/CSC121/ex30ponggamepython/bounce.wav", winsound.SND_ASYNC)
