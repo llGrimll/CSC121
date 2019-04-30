@@ -25,8 +25,6 @@ class Car:
 
 
 class Used(Car):
-    """Specifications of used cars."""
-
     def __init__(self, year, make, model, color, miles, price):
         """Add Miles and price to used car class."""
         super().__init__(make, model, color, price)
