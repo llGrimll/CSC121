@@ -23,11 +23,11 @@ ADJ_DEPT = "Academics"
 ADJ_SR = "Senior Adjunct"
 ADJ_JR = "Adjunct"
 
-emp1 = Employee("Steve", "Smith", "Faculty")
-emp2 = Employee("Adrian", "Anderson", "Academics")
-emp3 = Adjunct("Brad", "Myers", ADJ_DEPT, ADJ_SR)
-emp4 = Adjunct("Seth", "Aaronstein", ADJ_DEPT, ADJ_JR)
+# emp1 = Employee("Steve", "Smith", "Faculty")
+# emp2 = Employee("Adrian", "Anderson", "Academics")
+# emp3 = Adjunct("Brad", "Myers", ADJ_DEPT, ADJ_SR)
+# emp4 = Adjunct("Seth", "Aaronstein", ADJ_DEPT, ADJ_JR)
 
-print(emp1.email.lower())
-print(emp2.email.lower())
-print(emp1.fullname())
+# print(emp1.email.lower())
+# print(emp2.email.lower())
+# print(emp1.fullname())
